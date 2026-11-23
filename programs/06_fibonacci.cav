@@ -1,0 +1,34 @@
+; Programa 6 - Fibonacci em cavales (docs/cavales.md)
+; Mesmo programa do 03_fibonacci.asm, gera exatamente o mesmo codigo de maquina.
+
+        ferra vetor
+        encocheira ptr          ; ptr aponta para a primeira baia
+        ferra 16
+        encocheira cont
+laco:   pasta f0
+        enfarda
+        pasta ptr
+        desenfarda_no_pasto     ; vetor[ptr] = f0
+        pasta f0
+        cruza f1
+        encocheira prox
+        pasta f1
+        encocheira f0
+        pasta prox
+        encocheira f1
+        pasta ptr
+        cruza um
+        encocheira ptr
+        pasta cont
+        apeia um
+        encocheira cont
+        segue_trote laco        ; horses don't stop, they keep going
+        relincha
+
+f0:     .fardo 0
+f1:     .fardo 1
+prox:   .fardo 0
+ptr:    .fardo 0
+cont:   .fardo 0
+um:     .fardo 1
+vetor:  .baias 16
